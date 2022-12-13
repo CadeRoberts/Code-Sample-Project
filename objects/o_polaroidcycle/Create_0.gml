@@ -1,0 +1,10 @@
+firstCreature = true;
+picturesStored = 0;
+active = false;
+picSelected = 0;
+picsTaken = 0;
+whichCreature = 0;
+creatureName = 0;
+percent = 1;
+text = "Photo Catalogue";
+arrowTimer = 0;

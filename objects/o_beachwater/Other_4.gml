@@ -1,0 +1,1 @@
+if room == r_home2 image_angle = 180;
