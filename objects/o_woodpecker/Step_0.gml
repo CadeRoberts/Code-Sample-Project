@@ -1,3 +1,4 @@
+ // random pecking behavior
 if (peckLength <=0)						// we arent pecking
 	{
 		if (audio_is_playing(snd_woodPecker)) audio_stop_sound(snd_woodPecker);
@@ -29,5 +30,6 @@ if peckLength >= 0
 		image_speed = 0;
 	}
 	
+	// picture taking functions
 	creaturetrianglecheck();
 	creaturecaught();

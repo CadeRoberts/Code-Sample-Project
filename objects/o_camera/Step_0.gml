@@ -1,7 +1,5 @@
 // update camera
 
-
-
 //update destination
 if (instance_exists(follow))
 {

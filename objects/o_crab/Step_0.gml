@@ -1,4 +1,4 @@
-
+// crab runs to its circle if you get too close
 if(point_in_circle(o_boyo.x, o_boyo.y, x,y, 35))
 {
 	
@@ -13,6 +13,8 @@ if(tooClose) || (caught)
 	
 }
 
+
+// picture taking functions
 creaturetrianglecheck();
 
 creaturecaught();

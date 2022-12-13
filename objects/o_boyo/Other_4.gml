@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
 
+// collisions
+collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
+ // shadows
 if (instance_exists(shadow))
 {
 instance_destroy(shadow)

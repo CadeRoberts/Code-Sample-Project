@@ -13,7 +13,7 @@ keySnap = keyboard_check_pressed(ord("V"));
 keyCycle = keyboard_check_pressed(ord("Q"));
 
 
-
+// press button to debug
 if(breakPointButton)
 	{
 		timetodebug = true
@@ -28,7 +28,7 @@ if (inputMagnitude != 0)
 	{
 		directionHold = inputDirection;
 	}
-
+//pausing
 if (! global.gamePaused)
 	{
 		script_execute(state);

@@ -1,11 +1,10 @@
-
+// the  
 function PlayerStateFree(){
 
 //movement
 	if (keyRun) speedWalk = speedRun else speedWalk = 1
 	hSpeed = lengthdir_x(inputMagnitude*speedWalk, inputDirection);
 	vSpeed = lengthdir_y(inputMagnitude*speedWalk, inputDirection);
-
 
 if (keyCycle)
 {
@@ -14,9 +13,6 @@ if (keyCycle)
 	
 	
 }
-
-
-
 
 	PlayerCollision();
 
@@ -83,15 +79,11 @@ if (keyCycle)
 						direction = point_direction(x, y, other.x, other.y);
 						image_index = CARDINAL_DIR;
 					}
-					
-					
+				
 				}
-				
-				
+			
 			}
 
-	
-	
 	}
 
 	if (keyDSLR) //toggling DSLR
@@ -133,9 +125,6 @@ function playerstatelocked(){
 //do nothing	
 	
 }
-
-
-
 
 function PlayerStateDSLR(){
 	sprite_index = spriteCam;
@@ -180,7 +169,6 @@ function PlayerStateDSLR(){
 		if instance_exists(o_sandPiper)
 		{
 			o_sandPiper.currentView = 0;
-
 
 		} 
 	}

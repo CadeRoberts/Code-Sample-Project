@@ -18,9 +18,6 @@ if (! global.gamePaused)
 	
 }
 
-
-
-
 //switch boyo sprite with dslr direction
 dslrboyodirection();
 

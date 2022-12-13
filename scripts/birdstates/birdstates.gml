@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// holds all of the scripts for the bird object. Movement, chirps, flying away if you get too close
 function birdstatefree(){
 if segmentLength <=1
 	{
@@ -22,14 +21,9 @@ if segmentLength <=1
 					{
 						justMoved = true;
 			
-					}else justMoved = false;
-			
-			
+					}else justMoved = false;	
 			randomize();
-	
-	
 	}
-
 
 segmentLength -=1
 	
@@ -42,8 +36,7 @@ segmentLength -=1
 			whichChirp = choose(snd_sandPiperChirp1, snd_sandPiperChirp2);
 			randomPitch = random_range(0.8, 1.3);
 			audio_sound_pitch(whichChirp, randomPitch);
-			
-			audio_play_sound(whichChirp, 1, false)
+			audio_play_sound(whichChirp, 1, false);
 		
 		}
 		randomize();
@@ -53,7 +46,6 @@ justChirped = max(justChirped, 0)
 
 	hSpeed = lengthdir_x(inputMagnitude*speedWalk, inputDirection);
 	vSpeed = lengthdir_y(inputMagnitude*speedWalk, inputDirection);
-
 
 	//Update Sprite Index
 	var _oldSprite = sprite_index;
@@ -65,9 +57,6 @@ justChirped = max(justChirped, 0)
 
 	}else sprite_index = spriteIdle;
 	if (_oldSprite != sprite_index) localFrame = 0;
-
-
-
 
 PlayerAnimateSprite();
 PlayerCollision();
@@ -82,13 +71,10 @@ if (currentDistance <= evadeDistance) ||  (caught == true)
 	
 }
 
-
 }
-
 
 function birdstateevade(){
 	///calc direction and pick a random range opposite to fly away in
-
 
 inputDirection = evadeDirection;
 inputMagnitude = 1;
@@ -111,9 +97,6 @@ depth = -50;
 	}else sprite_index = spriteIdle;
 	if (_oldSprite != sprite_index) localFrame = 0;
 
-
-
-	
 	PlayerAnimateSprite();
 x += hSpeed;
 y += vSpeed;

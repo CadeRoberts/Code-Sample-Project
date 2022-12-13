@@ -1,3 +1,6 @@
+
+// this object tests to see if its being hit with a laser and if so, draws a ...
+// reflection line accordingly in the draw event
 if(!instance_exists(o_DSLR))
 	{
 		laserCollision = false;	
@@ -11,7 +14,5 @@ if (laserCollision == true) && (o_DSLR.cameraState == lasermode)
 	lineDir = (360 - originAngle);
 	lineEndX = lengthdir_x(lineLength, lineDir)+x;
 	lineEndY = lengthdir_y(lineLength, lineDir)+y;
-	
-	
 	
 } else draw_set_alpha(0);

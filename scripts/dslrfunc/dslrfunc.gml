@@ -1,13 +1,10 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// this script contains functions controlling: how the players picture-taking apparatus rotates,
+// calculates zooming based on lining up with markers, making a flash on the screen, 
+// playing sounds based on flash and zoom, switches to a laser that can reflect off of in-game objects
+// and changing the player's sprite based on the camera's angle
 function pictureMode(){
-
 orbit = 6 ;
-
-
 // play zoom sounds
-
-
 
 
 //set orbit left or right. press shift for quick
@@ -25,7 +22,6 @@ if ((keyRun) && (keyLeft)) or ((keyLeft) && (keyRun))
 	{
 		oSpeed = 5;	
 	}
-
 
 if ((keyRun) && (keyRight)) or ((keyRight) && (keyRun))
 	{
@@ -74,16 +70,13 @@ zoomLength = (orbitRatio)*30
 		(y-(sprite_get_height(spr_flash)/2)),
 		flashLayer,
 		o_flash);
-		
-		
+	
 	}	
 	if (keyActivate) cameraState = lasermode
 }
 
 function lasermode(){
 	orbit = 6 ;
-
-	
 
 
 //set orbit left or right. press shift for quick
@@ -134,23 +127,17 @@ oSpeed =0; // only moves while pressed
 	reflectionMarkerLine = instance_create_layer(lineMarkerEndX, lineMarkerEndY,layer, o_reflectionMarkerLine);
 	}
 	
-	
 	reflectorHit = collision_line(lineBeginX, lineBeginY, lineEndX, lineEndY, par_reflector, false, false) // stores instance of collision with line
 	if (reflectorHit != noone)		// if any reflector is getting hit
 	{
 		newLength = point_distance(lineBeginX, lineBeginY, reflectorHit.x, reflectorHit.y);				// laser stops at reflector
 		lineLength = newLength;
 		
-		
 			with (reflectorHit)																			//with object getting hit
 			{
-					laserCollision = true;
-					
+					laserCollision = true;	
 			} 
-		
-		
-		
-		
+	
 	}
 	else 
 	{
@@ -165,10 +152,8 @@ oSpeed =0; // only moves while pressed
 	
 }
 
-
-
 function dslrboyodirection(){
-		
+		// this switches the sprite of the player depending on which way the camera aims
 		cameraAim = point_direction(o_boyo.x, o_boyo.y - DSLRYOffset, x,y);
 
 	var _boyoLooking = 1;
@@ -216,9 +201,4 @@ with (o_boyo)
 	}
 		
 }
-	
-	
-	
-	
-	
 	
